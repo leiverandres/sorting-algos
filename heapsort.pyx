@@ -1,6 +1,4 @@
-# To heapify subtree rooted at index i.
-# n is size of heap
-def heapify(arr, n, i):
+def heapify(arr, int n, int i):
     largest = i  # Initialize largest as root
     l = 2 * i + 1  # left = 2*i + 1
     r = 2 * i + 2  # right = 2*i + 2
@@ -23,11 +21,9 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 
 
-# The main function to sort an array of given size
 def heap_sort(arr):
+    cdef int i, n
     n = len(arr)
-
-    # Build a maxheap.
     for i in range(n, -1, -1):
         heapify(arr, n, i)
 

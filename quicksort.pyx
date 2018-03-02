@@ -4,6 +4,7 @@
 # to left of pivot and all greater elements to right
 # of pivot
 def partition(arr, low, high):
+    cdef int i
     i = (low - 1)  # index of smaller element
     pivot = arr[high]  # pivot
 
@@ -26,7 +27,7 @@ def partition(arr, low, high):
 # low  --> Starting index,
 # high  --> Ending index
 
-def quick_sort(arr, low, high):
+def quick_sort(arr, long long low, long long high):
     if low < high:
 
         # pi is partitioning index, arr[p] is now
